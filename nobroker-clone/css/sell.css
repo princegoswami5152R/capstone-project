@@ -18,7 +18,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.navbar .container {
+.navbar .cat {
   width: 90%;
   margin: auto;
   display: flex;
@@ -112,7 +112,7 @@ form {
 }
 
 
-.footer {
+.foot {
   text-align: center;
   padding: 2rem 0;
   margin-top: 3rem;

@@ -18,7 +18,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.navbar .container {
+.navbar .cat {
   width: 90%;
   margin: auto;
   display: flex;
@@ -51,7 +51,7 @@ body {
   padding: 120px 0;
   height: 700px;
   text-align: center;
-  color: white;
+  color: rgba(0, 0, 0, 0.901);
 
 
 }
@@ -80,7 +80,7 @@ body {
 }
 
 
-.search-bar {
+.search-button {
   margin-top: -30px;
   display: flex;
   /* width: 500px; */
@@ -153,11 +153,11 @@ h2 {
   object-fit: cover;
 }
 
-.card-info {
+.card-housee {
   padding: 15px;
 }
 
-.card-info h3 {
+.card-housee h3 {
   font-size: 18px;
   margin-bottom: 8px;
 }

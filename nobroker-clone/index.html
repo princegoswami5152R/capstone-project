@@ -11,21 +11,49 @@
 
 <body>
     <nav class="navbar">
-        <div class="cat">
-            <a href="index.html" class="logo">DirectDwell</a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="properties.html">Buy</a>
-                <a href="sell.html">Sell</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <!-- new -->
-                <button class="nav-btn" onclick="openModal('login')">Login</button>
-                <button class="nav-btn signup" onclick="openModal('signup')">Sign Up</button>
-            </div>
+    <div class="cat">
+        <a href="index.html" class="logo">DirectDwell</a>
+
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="properties.html">Buy</a>
+            <a href="sell.html">Sell</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
-    </nav>
+
+        <div class="auth-buttons">
+            <button class="btn-auth login-btn" onclick="openLogin()">Login</button>
+            <button class="btn-auth signup-btn" onclick="openSignup()">Sign Up</button>
+        </div>
+    </div>
+</nav>
+<!-- Login Popup -->
+<div id="loginPopup" class="popup-box">
+    <h3>Login</h3>
+    <input id="user" type="text" placeholder="Email">
+    <p id="emailError" style="color:red; font-size:13px; margin: 4px 0px;"></p>
+    <input type="password" placeholder="Password" id="password">
+    <p  id="passError" style="color:red; font-size:13px; margin: 4px 0px;"></p>
+    <button>Login</button>
+    <button class="close-btn" onclick="closePopup('loginPopup')">Close</button>
+</div>
+
+<!-- Signup Popup -->
+<div id="signupPopup" class="popup-box">
+    <h3>Sign Up</h3>
+    <input type="text" placeholder="Full Name">
+    <input id="user1" type="text" placeholder="Email">
+    <p id="emailError1" style="color:red; font-size:13px; margin: 4px 0px;"></p>
+    <input type="password" placeholder="Password" id="password1">
+    <p  id="passError1" style="color:red; font-size:13px; margin: 4px 0px;"></p>
+    <button>Sign Up</button>
+    <button class="close-btn" onclick="closePopup('signupPopup')">Close</button>
+</div>
+
+
     <section class="hero">
+        
         <div class="cat">
             <h1>Find Your Perfect Home</h1>
             <p>Buy • Sell • Rent – Zero Brokerage</p>
@@ -47,8 +75,8 @@
             <button type="submit">Search</button>
         </form>
     </div>
-    <section class="cat" id="section">
-        <h2>Featured Properties</h2>
+    <section class="cat">
+        <h2 class="feature">Featured Properties</h2>
         <div class="card-grid">
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
@@ -89,22 +117,6 @@
             </p>
             <p>© 2025 DirectDwell. All rights reserved.</p>
         </div>
-        <!-- Body ke end mein, </footer> se just pehle yeh pura modal paste kar -->
-<!-- Login / Sign Up Modal -->
-<div id="authModal" class="modal-overlay">
-    <div class="modal-box">
-        <span class="close-btn" onclick="closeModal()">×</span>
-        <h2 id="modalTitle">Login</h2>
-        <form id="authForm">
-            <input type="text" id="username" placeholder="Enter username" required />
-            <input type="password" id="password" placeholder="Enter password" required />
-            <button type="submit" id="submitBtn">Login</button>
-        </form>
-        <p id="switchText" class="switch-text">
-            Don't have an account? <span onclick="openModal('signup')" class="link">Sign Up</span>
-        </p>
-    </div>
-</div>
     </footer>
     <script src="js/auth.js"></script>
 

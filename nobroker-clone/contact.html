@@ -9,18 +9,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
+<nav class="navbar">
     <div class="cat">
-      <a href="index.html" class="logo">DirectDwell</a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="properties.html">Buy</a>
-        <a href="sell.html">Sell</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="active">Contact</a>
-      </div>
+        <a href="index.html" class="logo">DirectDwell</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html" >Buy</a>
+            <a href="sell.html">Sell</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+
+        <div class="auth-buttons">
+            <button class="btn-auth login-btn" onclick="openLogin()">Login</button>
+            <button class="btn-auth signup-btn" onclick="openSignup()">Sign Up</button>
+        </div>
     </div>
-  </nav>
+</nav>
+<!-- Login Popup -->
+<div id="loginPopup" class="popup-box">
+    <h3>Login</h3>
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+    <button class="close-btn" onclick="closePopup('loginPopup')">Close</button>
+</div>
+
+<!-- Signup Popup -->
+<div id="signupPopup" class="popup-box">
+    <h3>Sign Up</h3>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Sign Up</button>
+    <button class="close-btn" onclick="closePopup('signupPopup')">Close</button>
+</div>
   <section class="page-mains cat">
     <h1>Get in Touch</h1>
     <p style="text-align:center;max-width:600px;margin:auto;margin-bottom:2rem;">Have a property to sell? Need help finding one? Drop us a message!</p>

@@ -1,36 +1,84 @@
-// js/auth.js
+function openLogin() {
+    document.getElementById("loginPopup").style.display = "block";
+}
 
-function openModal(type) {
-    document.getElementById("authModal").style.display = "flex";
+function openSignup() {
+    document.getElementById("signupPopup").style.display = "block";
+}
 
-    if (type === 'login') {
-        document.getElementById("modalTitle").textContent = "Login";
-        document.getElementById("submitBtn").textContent = "Login";
-        document.getElementById("switchText").innerHTML = `Don't have an account? <span onclick="openModal('signup')" class="link">Sign Up</span>`;
-    } else {
-        document.getElementById("modalTitle").textContent = "Sign Up";
-        document.getElementById("submitBtn").textContent = "Sign Up";
-        document.getElementById("switchText").innerHTML = `Already have an account? <span onclick="openModal('login')" class="link">Login</span>`;
+function closePopup(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+const emailInput = document.getElementById("user");
+const emailError = document.getElementById("emailError");
+
+emailInput.addEventListener("input", function () {
+    if (!emailInput.value.includes("@")) {
+         emailError.textContent = "Email should contain @";
+        } else {
+            emailError.textContent = "";
     }
-}
+});
 
-function closeModal() {
-    document.getElementById("authModal").style.display = "none";
-}
-
-// Click outside modal to close karega
-window.onclick = function(e) {
-    const modal = document.getElementById("authModal");
-    if (e.target === modal) {
-        closeModal();
+(function () {
+    const passwordInput = document.getElementById('password');
+    const passError = document.getElementById('passError');
+    
+    function hasSpecialChar(s) {
+        if (!s) return false;
+        return /[^A-Za-z0-9]/.test(s);
     }
-}
+    
+    if (passwordInput) {
+        passwordInput.addEventListener('input', function () {
+            if (passwordInput.value === '') {
+                if (passError) passError.textContent = '';
+                return;
+            }
+            if (!hasSpecialChar(passwordInput.value)) {
+                if (passError) passError.textContent = 'Password should include at least one special character.';
+            } else {
+                if (passError) passError.textContent = '';
+            }
+        });
+    }
+})();
 
-// Form submit (bas alert dikhayega, real login nahi hai)
-document.getElementById("authForm").onsubmit = function(e) {
-    e.preventDefault();
-    const username = document.getElementById("username").value;
-    alert("Welcome, " + username + "! You are now logged in");
-    closeModal();
-    document.getElementById("authForm").reset();
-}
+
+
+// Siqnup 
+
+const emailInput1 = document.getElementById("user1");
+const emailError1 = document.getElementById("emailError1");
+
+emailInput1.addEventListener("input", function () {
+    if (!emailInput1.value.includes("@")) {
+         emailError1.textContent = "Email should contain @";
+        } else {
+            emailError1.textContent = "";
+    }
+});
+(function () {
+    const passwordInput1 = document.getElementById('password1');
+    const passError1 = document.getElementById('passError1');
+
+    function hasSpecialChar(s) {
+        if (!s) return false;
+        return /[^A-Za-z0-9]/.test(s);
+    }
+
+    if (passwordInput1) {
+        passwordInput1.addEventListener('input', function () {
+            if (passwordInput1.value === '') {
+                if (passError1) passError1.textContent = '';
+                return;
+            }
+            if (!hasSpecialChar(passwordInput1.value)) {
+                if (passError1) passError1.textContent = 'Password should include at least one special character.';
+            } else {
+                if (passError1) passError1.textContent = '';
+            }
+        });
+    }
+})();

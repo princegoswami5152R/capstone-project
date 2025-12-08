@@ -29,6 +29,9 @@ emailInput.addEventListener("input", function () {
         if (!s) return false;
         return /[^A-Za-z0-9]/.test(s);
     }
+    function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("show");
+    }
     
     if (passwordInput) {
         passwordInput.addEventListener('input', function () {
@@ -47,38 +50,3 @@ emailInput.addEventListener("input", function () {
 
 
 
-// Siqnup 
-
-// const emailInput1 = document.getElementById("user1");
-// const emailError1 = document.getElementById("emailError1");
-
-// emailInput1.addEventListener("input", function () {
-//     if (!emailInput1.value.includes("@")) {
-//          emailError1.textContent = "Email should contain @";
-//         } else {
-//             emailError1.textContent = "";
-//     }
-// });
-// (function () {
-//     const passwordInput1 = document.getElementById('password1');
-//     const passError1 = document.getElementById('passError1');
-
-//     function hasSpecialChar(s) {
-//         if (!s) return false;
-//         return /[^A-Za-z0-9]/.test(s);
-//     }
-
-//     if (passwordInput1) {
-//         passwordInput1.addEventListener('input', function () {
-//             if (passwordInput1.value === '') {
-//                 if (passError1) passError1.textContent = '';
-//                 return;
-//             }
-//             if (!hasSpecialChar(passwordInput1.value)) {
-//                 if (passError1) passError1.textContent = 'Password should include at least one special character.';
-//             } else {
-//                 if (passError1) passError1.textContent = '';
-//             }
-//         });
-//     }
-// })();

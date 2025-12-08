@@ -17,7 +17,7 @@ body {
   padding: 15px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-//new 
+ 
 /* Centered Navbar */
 .navbar .cat {
   width: 90%;
@@ -269,7 +269,140 @@ body {
   text-align: center;
 }
 
-.footer p {
+.footer .P {
   margin: 5px 0;
   font-size: 14px;
 }
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+
+  .navbar .cat {
+    width: 95%;
+  }
+
+  .nav-links a {
+    margin-left: 12px;
+    font-size: 15px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    margin-top: 150px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .search-form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-form input,
+  .search-form select {
+    width: 48%;
+  }
+
+  .search-form button {
+    width: 100%;
+  }
+}
+
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .nav-links {
+    display: none;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  /* Hero section */
+  .hero {
+    height: 550px;
+    padding: 80px 0;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    margin-top: 140px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* Search box */
+  .search-form {
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .search-form input,
+  .search-form select,
+  .search-form button {
+    width: 100%;
+  }
+
+  /* Cards 1 per row */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    font-size: 24px;
+  }
+
+  /* Popup */
+  .popup-box {
+    width: 90%;
+  }
+}
+
+
+/* Extra Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+
+  .hero {
+    height: 500px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .card-housee h3 {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .popup-box input {
+    padding: 8px;
+  }
+
+  .popup-box button {
+    padding: 9px;
+  }
+}
+

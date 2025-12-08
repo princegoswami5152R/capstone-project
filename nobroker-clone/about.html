@@ -30,12 +30,13 @@
 <!-- Login Popup -->
 <div id="loginPopup" class="popup-box">
     <h3>Login</h3>
-    <input type="text" placeholder="Email">
-    <input type="password" placeholder="Password">
+    <input id="user" type="text" placeholder="Email">
+    <p id="emailError" style="color:red; font-size:13px; margin: 4px 0px;"></p>
+    <input type="password" placeholder="Password" id="password">
+    <p  id="passError" style="color:red; font-size:13px; margin: 4px 0px;"></p>
     <button>Login</button>
     <button class="close-btn" onclick="closePopup('loginPopup')">Close</button>
 </div>
-
 <!-- Signup Popup -->
 <div id="signupPopup" class="popup-box">
     <h3>Sign Up</h3>
@@ -68,6 +69,7 @@
       <p>© 2025 DirectDwell. All rights reserved.</p>
     </div>
   </footer>
+   <script src="js/auth.js"></script>
 
 </body>
 </html>

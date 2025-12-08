@@ -44,6 +44,97 @@ body {
 .nav-links a:hover {
   color: #007bff;
 }
+
+/* Centered Navbar */
+.navbar .cat {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Right side auth buttons group */
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+.btn-auth {
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.signup-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+/* Button hover effects */
+.login-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+.signup-btn:hover {
+  background: #005fcc;
+}
+
+/* Popup modal */
+.popup-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 9999;
+}
+
+.popup-box h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.popup-box button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-btn {
+  background: #ff3b3b;
+  margin-top: 8px;
+}
+
 .hero {
   text-align: center;
   background: #eef3ff;
